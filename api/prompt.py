@@ -1,1 +1,3 @@
-PROMPT_SUMMARIZE =  """summarize : {text}"""
+PROMPT_SUMMARIZE =  """summarize the text only in english
+    ###
+    TEXT : {text}"""
