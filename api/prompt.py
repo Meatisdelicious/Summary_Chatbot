@@ -1,0 +1,1 @@
+PROMPT_SUMMARIZE =  """summarize : {text}"""
