@@ -10,4 +10,6 @@ dependencies = [
     "langchain>=1.2.10",
     "langchain-openai>=1.1.11",
     "openai>=2.26.0",
+    "python-multipart>=0.0.22",
+    "uvicorn>=0.41.0",
 ]
