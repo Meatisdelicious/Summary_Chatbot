@@ -1,3 +1,4 @@
 .env
 .ds_store
 .envrc
+__pycache__/
