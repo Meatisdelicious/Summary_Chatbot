@@ -1,0 +1,21 @@
+.
+├── api
+│   ├── __init__.py
+│   ├── chain.py
+│   ├── prompt.py
+│   └── test_functions.ipynb
+├── data
+│   └── story.txt
+├── .env
+├── .envrc
+├── .gitignore
+├── langchain_test.ipynb
+├── openai_api_test.ipynb
+├── project_structure.txt
+├── pyproject.toml
+├── python-version
+├── readme.md
+├── requirements.txt
+└── uv.lock
+
+3 directories, 16 files
