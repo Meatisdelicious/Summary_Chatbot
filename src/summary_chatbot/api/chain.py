@@ -3,7 +3,7 @@ import os
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from dotenv import load_dotenv
-from prompt import PROMPT_SUMMARIZE # to import the function from the file 
+from summary_chatbot.prompts.prompt import PROMPT_SUMMARIZE
 
 load_dotenv() #needed for the file to see my api key and model type (env variables)
 
