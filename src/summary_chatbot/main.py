@@ -3,8 +3,10 @@ from summary_chatbot.api.chain import summarise
 from summary_chatbot.api.chain import State, call_model, summarize_history, should_continue, print_update, summarise
 from langgraph.checkpoint.memory import MemorySaver
 from langgraph.graph import StateGraph, START, END
-from langchain_core.messages import HumanMessage #, SystemMessage, RemoveMessage  
+from langchain_core.messages import HumanMessage
 from fastapi.responses import StreamingResponse
+from fastapi import Body
+
 
 app = FastAPI()
 
@@ -52,7 +54,7 @@ async def generate_stream(input_message, config, chain):
         yield event["conversation"]["messages"][0].content
 
 @app.post("/update")
-def update(request: str):
+async def update(request: str = Body(..., media_type="text/plain")):
     config = {"configurable": {"thread_id": "4"}}
     input_message = HumanMessage(content=request)
     return StreamingResponse(generate_stream(input_message, config, chain), media_type="text/plain")
