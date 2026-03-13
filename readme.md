@@ -80,19 +80,28 @@ The frontend will start on `http://localhost:8501`
 
 ```
 Summary_Chatbot/
+├── 1_notebooks/           # Development notebooks
+│   ├── langchain_test.ipynb
+│   ├── openai_api_test.ipynb
+│   └── usefull_comments.py
+├── 2_data/                # Sample data and results
+│   ├── result_example.png
+│   └── story.txt
 ├── app/
-│   └── app.py              # Streamlit frontend
+│   └── app.py             # Streamlit frontend
 ├── src/
 │   └── summary_chatbot/
 │       ├── __init__.py
-│       ├── main.py         # FastAPI backend
+│       ├── main.py        # FastAPI backend
 │       ├── api/
-│       │   └── chain.py    # LangChain/LangGraph logic
+│       │   └── chain.py   # LangChain/LangGraph logic
 │       └── prompts/
-│           └── prompt.py   # AI prompts
-├── tests/                  # Test notebooks
-├── 1_notebooks/           # Development notebooks
-├── 2_data/                # Sample data
+│           └── prompt.py  # AI prompts
+├── tests/                 # Test notebooks
+│   ├── test_chat_history.ipynb
+│   └── test_functions.ipynb
+├── .env                   # Environment variables
+├── project_structure.txt  
 ├── pyproject.toml         # Project configuration and dependencies
 └── README.md
 ```
