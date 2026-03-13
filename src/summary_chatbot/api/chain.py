@@ -69,12 +69,6 @@ def summarize_history(state: State) -> dict:
     return {"history": response.content, "messages": delete_message}
 
 
-# def should_continue(state: State) -> Literal["summarize_history", END]:
-#     message = state["messages"]
-#     if len(message) > 6:
-#         return "summarize_history"
-#     return END
-
 # cleaner version, because end works as a value in the graph, 
 # but not as a return type in the function, so we need to use a string instead
 def should_continue(state: State) -> Literal["summarize_history", "__end__"]:
@@ -85,7 +79,6 @@ def should_continue(state: State) -> Literal["summarize_history", "__end__"]:
 
 
 # obj --> appeller mon modèle, s'il y a un histique conversationel, l'afficher.
-
 # fonction qui affiche le doctionnaire, pour voir ou on en est le chatbot
 def print_update(update: dict) -> None:
     for k, v in update.items():
