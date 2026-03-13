@@ -3,17 +3,19 @@
 │   └── story.txt
 ├── notebooks
 │   ├── langchain_test.ipynb
-│   └── openai_api_test.ipynb
+│   ├── openai_api_test.ipynb
+│   └── usefull_comments.py
 ├── src
 │   └── summary_chatbot
 │       ├── api
 │       │   └── chain.py
 │       ├── prompts
 │       │   └── prompt.py
-│       └── __init__.py
+│       ├── __init__.py
+│       └── main.py
 ├── tests
-│   ├── test_functions.ipynb
-│   └── test_functions.py
+│   ├── test_chat_history.ipynb
+│   └── test_functions.ipynb
 ├── .env
 ├── .envrc
 ├── .gitignore
@@ -22,4 +24,4 @@
 ├── readme.md
 └── uv.lock
 
-8 directories, 15 files
+8 directories, 17 files
