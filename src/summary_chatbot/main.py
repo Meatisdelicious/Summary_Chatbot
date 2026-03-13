@@ -3,7 +3,7 @@ from summary_chatbot.api.chain import summarise
 from summary_chatbot.api.chain import State, call_model, summarize_history, should_continue, print_update, summarise
 from langgraph.checkpoint.memory import MemorySaver
 from langgraph.graph import StateGraph, START, END
-from langchain_core.messages import HumanMessage, SystemMessage, RemoveMessage  
+from langchain_core.messages import HumanMessage #, SystemMessage, RemoveMessage  
 from fastapi.responses import StreamingResponse
 
 app = FastAPI()
