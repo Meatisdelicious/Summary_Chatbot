@@ -75,8 +75,6 @@ def should_continue(state: State) -> Literal["summarize_history", "__end__"]:
         return "summarize_history"
     return END
 
-# obj --> appeller mon modèle, s'il y a un histique conversationel, l'afficher.
-# fonction qui affiche le doctionnaire, pour voir ou on en est le chatbot
 def print_update(update: dict) -> None:
     for _, v in update.items():
         for m in v["messages"]:
