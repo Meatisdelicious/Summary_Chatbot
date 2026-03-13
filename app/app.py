@@ -19,7 +19,6 @@ if st.session_state.resume:
     st.write("Summarization :")
     st.write(st.session_state.resume)
 
-
 st.header("Chatbot")
 if "history" not in st.session_state:
     st.session_state.history = []
