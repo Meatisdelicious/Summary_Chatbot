@@ -1,6 +1,8 @@
-# run in the summary_chatbot folder (when you can see the main)
+# run in the src/summary_chatbot folder (the backend)
 # uvicorn main:app --reload
 
+# run the frontend (using streamlit). Run the command in the app folder.
+# streamlit run app.py
 
 # other usefull commands : 
 # update project structure file :
