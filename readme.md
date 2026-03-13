@@ -2,6 +2,10 @@
 
 A web application that allows users to upload text files, generate summaries, and engage in conversational chat about the content using AI.
 
+<div align="center">
+  <img src="2_data/result_example.png" alt="Example Chat Interface" width="400">
+</div>
+
 ## Features
 
 - **File Upload & Summarization**: Upload `.txt` files to generate AI-powered summaries
