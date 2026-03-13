@@ -4,6 +4,7 @@
 │   ├── openai_api_test.ipynb
 │   └── usefull_comments.py
 ├── 2_data
+│   ├── result_example.png
 │   └── story.txt
 ├── app
 │   └── app.py
@@ -26,4 +27,4 @@
 ├── readme.md
 └── uv.lock
 
-9 directories, 18 files
+9 directories, 19 files
