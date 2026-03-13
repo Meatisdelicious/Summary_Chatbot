@@ -51,7 +51,6 @@ def call_model(state: State, conversation_summary: str) -> dict:
     # We return a list, because this will get added to the existing list
     return {"messages": [response]}
 
-
 def summarize_history(state: State) -> dict:
     llm_summarize = ChatOpenAI(
         temperature=0.2,
@@ -68,7 +67,6 @@ def summarize_history(state: State) -> dict:
     delete_message = [RemoveMessage(id=m.id) for m in state["messages"][:-2]]
     return {"history": response.content, "messages": delete_message}
 
-
 # cleaner version, because end works as a value in the graph, 
 # but not as a return type in the function, so we need to use a string instead
 def should_continue(state: State) -> Literal["summarize_history", "__end__"]:
@@ -76,7 +74,6 @@ def should_continue(state: State) -> Literal["summarize_history", "__end__"]:
     if len(message) > 6:
         return "summarize_history"
     return END
-
 
 # obj --> appeller mon modèle, s'il y a un histique conversationel, l'afficher.
 # fonction qui affiche le doctionnaire, pour voir ou on en est le chatbot
