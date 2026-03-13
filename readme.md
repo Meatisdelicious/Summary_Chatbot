@@ -50,7 +50,7 @@ A web application that allows users to upload text files, generate summaries, an
 
 In a terminal, run:
 ```bash
-uv run uvicorn src.summary_chatbot.main:app --reload
+PYTHONPATH=src uv run uvicorn summary_chatbot.main:app --reload
 ```
 
 The backend will start on `http://127.0.0.1:8000`

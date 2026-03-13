@@ -32,6 +32,7 @@ async def initialize(file: UploadFile = File(...)):
         return {"error": "Only text files are supported"}
     content = await file.read()
     text = content.decode("utf-8")
+    summary = summarise(text)
 
     # Define a new graph
     workflow = StateGraph(State)
@@ -43,10 +44,8 @@ async def initialize(file: UploadFile = File(...)):
         should_continue,
     )
     workflow.add_edge("summarize_history", END)
-
     memory = MemorySaver()
     chain = workflow.compile(checkpointer=memory)
-    summary = summarise(text)
     return {"summarise": summary}
 
 async def generate_stream(input_message, config, chain):
