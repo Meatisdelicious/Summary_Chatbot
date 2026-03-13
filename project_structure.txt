@@ -1,10 +1,12 @@
 .
-├── data
-│   └── story.txt
-├── notebooks
+├── 1_notebooks
 │   ├── langchain_test.ipynb
 │   ├── openai_api_test.ipynb
 │   └── usefull_comments.py
+├── 2_data
+│   └── story.txt
+├── app
+│   └── app.py
 ├── src
 │   └── summary_chatbot
 │       ├── api
@@ -24,4 +26,4 @@
 ├── readme.md
 └── uv.lock
 
-8 directories, 17 files
+9 directories, 18 files
